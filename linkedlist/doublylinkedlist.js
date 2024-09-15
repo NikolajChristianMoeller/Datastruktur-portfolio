@@ -30,7 +30,7 @@ export default class DoublyLinkedList {
     const newNode = new Node(data);
     this.addNodeFirst(newNode);
   }
-  
+
   addLast(data) {
     const newNode = new Node(data);
     this.addNodeLast(newNode);
@@ -108,6 +108,10 @@ export default class DoublyLinkedList {
     }
     return null; 
   }
+
+  // MANGLER AT LAVE INSERT
+
+  
 
   size() {
     let count = 0;
