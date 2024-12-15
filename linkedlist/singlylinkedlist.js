@@ -1,3 +1,13 @@
+class Node {
+  next; // Peger hen på næste node
+  data; // Peger hen på data som er enemy i dette tilfælde
+
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
+}
+
 export default class SinglyLinkedList {
   head = null;
 
@@ -116,15 +126,5 @@ export default class SinglyLinkedList {
 
   clear() {
     this.head = null;
-  }
-}
-
-class Node {
-  next; // Peger hen på næste node
-  data; // Peger hen på data som er enemy i dette tilfælde
-
-  constructor(data) {
-    this.data = data;
-    this.next = null;
   }
 }
