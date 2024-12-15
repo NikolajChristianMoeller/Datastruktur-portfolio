@@ -1,5 +1,18 @@
 // Implemented with singly linked list
 // Last in first out
+class Node {
+  data = null;
+  next = null;
+  constructor(data = null, next = null) {
+    this.data = data;
+    this.next = next;
+  }
+
+  setNext(newNext) {
+    this.next = newNext;
+  }
+}
+
 export default class Stack {
   tail = null;
 
@@ -12,7 +25,6 @@ export default class Stack {
   pop() {
     const prev = this.tail;
     this.tail = prev.next;
-
     return prev;
   }
 
@@ -28,7 +40,6 @@ export default class Stack {
       size++;
       current = current.next;
     }
-
     return size;
   }
 
@@ -43,20 +54,6 @@ export default class Stack {
       }
       current = current.next;
     }
-
     return current;
-  }
-}
-
-class Node {
-  data = null;
-  next = null;
-  constructor(data = null, next = null) {
-    this.data = data;
-    this.next = next;
-  }
-
-  setNext(newNext) {
-    this.next = newNext;
   }
 }

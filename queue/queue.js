@@ -12,11 +12,6 @@ export class Queue {
     this.length = 0;
   }
 
-  // enqueue(data)
-  // dequeue
-  // peek
-  // size
-  // get(index)
 
   enqueue(data) {
    const node = new Node(data);
@@ -32,11 +27,6 @@ export class Queue {
    }
    this.length++;
   }
-
-  
-
-  //                      null <- B <- A:  Start
-  //                 null <- C <- B <- A:  Start
 
   dequeue() {
     if (this.head == null) {
@@ -71,8 +61,11 @@ get(index) {
     }
 }
 
+
+
 let queue = new Queue();
 queue.enqueue(2);
 queue.enqueue(5);
 queue.enqueue(7);
 console.log(queue.get(0));
+
